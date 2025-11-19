@@ -64,7 +64,7 @@ to build the vulnerable (target) AI model.
 Since this is a simulation for academic purposes, we will create random data to mimic Mel-Frequency Cepstral Coefficient (MFCC) features. MFCC is a feature extraction process that turns complex sound waves into numeric values. Essentially, MFCC is 
 being used in this context to be the numerical representation of a voice. Once we have the MFCC dataset parameters we will train a Deep Neural Network (DNN - a type of broader AI ) that can identify the voices (MFCC values) that we generated in step 1. 
 
-# **Technologies used in Phase 1**: 
+***Technologies used in Phase 1***: 
 
 **TensorFlow/Keras:** trains and builds the neural network
 
@@ -155,23 +155,28 @@ print("Phase I: DNN Model Training Complete.")
 #Phase I: DNN Model Training Complete.
 ```
 
-#Phase 2: Building the Attack Tool
+# Phase 2: Building the Attack Tool
 
 The goal of phase 2 is to establish the exact targete (victim model) and begin optimization process. Optimization initialization we're looking at how we're going to setup the "problem" for the computer to solve. Think of phase 2 as
 setting the coordinates on a GPS and then checking that you have fuel and a starting position for your car before the trip. The difference is that we're driving to a specfic destination that we don't know yet. The "where" this destination is 
 will be part of phase 3 (running the attack). 
 
-# Technologies used in Phase 2: 
+***Technologies used in Phase 2:***
 
 *TensorFlow: creates a variable for the random starting vector
+
 *Adam Optimizer: corrects the fake MFCC during the simulated attack 
+
 *NumPy: reshapes data and prepares the inputs
 
-# Methods used in Phase 2
+***Methods used in Phase 2***
 
 *Create the target label: We want the model to output **User 5**
+
 *Random initialization: starts with noise, not real audio
+
 *Define the hyperparameters: the number of interations, learning rate, etc...
+
 *Set up optimization: preparing to tweak the vector to look like the output (MFCC syntentic voice) of User 5
 
 ```python
