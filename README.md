@@ -64,13 +64,13 @@ to build the vulnerable (target) AI model.
 Since this is a simulation for academic purposes, we will create random data to mimic Mel-Frequency Cepstral Coefficient (MFCC) features. MFCC is a feature extraction process that turns complex sound waves into numeric values. Essentially, MFCC is 
 being used in this context to be the numerical representation of a voice. Once we have the MFCC dataset parameters we will train a Deep Neural Network (DNN - a type of broader AI ) that can identify the voices (MFCC values) that we generated in step 1. 
 
-Technologies used: 
+#**Technologies used**: 
 
 **TensorFlow/Keras:** trains and builds the neural network
 
 **NumPy:** creates fake MFCC data
 
-Methods used (what's being done): 
+#Methods used (what's being done): 
 
 **MFCC simulation:** pretends to have human voice features
 
