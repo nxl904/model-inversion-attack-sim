@@ -70,9 +70,9 @@ being used in this context to be the numerical representation of a voice. Once w
 
 **NumPy:** creates fake MFCC data
 
-#Methods used (what's being done) in Phase 1 : 
+# **Methods used (what's being done) in Phase 1** : 
 
-# **MFCC simulation:** pretends to have human voice features
+**MFCC simulation:** pretends to have human voice features
 
 **Label encoding:** turns the users IDs into 0/1 vectors
 
