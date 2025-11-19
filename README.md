@@ -28,9 +28,13 @@ This simulation consists of 4 distinct phases and associated code buckets for re
 We will be using the following python libraries and associated technologies to accomplish this: 
 
 **tensorflow:** deep-learning framework used to compile and build the DNN. tensorflow is essentially a machine-learning engine 
+
 **keras:** tensforflows high-level API 
+
 **numpy:** python's numerical computing library, used to create synthetic MFCC feature vectors. It's being used in this context to generate and manipulate the simulated dataset
+
 **scikit-learn:** python's machine-learning utility toolkit
+
 **matplotlib:** python's plotting library. It will 
 
 
