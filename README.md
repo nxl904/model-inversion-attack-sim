@@ -98,7 +98,7 @@ NUM_CLASSES = 10 # Assume 10 unique speakers/user IDs
 VECTOR_LENGTH = NUM_MFCCS * 10 # Assume 10 frames are concatenated for an utterance vector
 
 # --- Step 1: Select Simulated MFCC Dataset ---
-print("Phase I: System Setup - Simulating MFCC Data...")
+print("Phase I: System Set up - Simulating MFCC Data...")
 
 # SIMULATION: Create synthetic MFCC data for 10 users (classes)
 X_simulated = np.random.randn(500, VECTOR_LENGTH).astype('float32')
@@ -148,7 +148,7 @@ print("Phase I: DNN Model Training Complete.")
 # Output of Phase 1:
 
 ```python
-#Phase I: System Setup - Simulating MFCC Data...
+#Phase I: System Set Up - Simulating MFCC Data...
 #Data Simulated. Target (User ID 5) Feature Vector shape: (390,)
 #Phase I: Starting Target DNN Model Training...
 #Phase I: DNN Model Training Complete.
@@ -349,6 +349,12 @@ Attack Successful! The reconstructed vector is highly confident for the target u
 Next step is to feed the x* vector into a VOCDER for voice synthesis.
 '''
 ```
+# Conclusion
+
+
+We successfully conducted an ethical Model Inversion Attack (MIA) hacking simulation to expose a common security vulnerability in AI systems. Our approach was to first set up a vulnerable victim AI model (Target Model). We did this 
+by training the target model to recognize the unique voice features (MFCC) of different users, in essence forcing the model to memorize the voice signature of our target victim (User 5). The attack used random numerical noise as it's starting point. 
+From there the attack was implemented through utilizing Gradient Descent, a process of reverse engineering where we asked the trained AI: *"How must I change this noise to make you most confident it belongs to User 5?"* The AI used a loss function to measure the error, and then provide the gradient (the direction to reduce that error). This gradient was used to modify the noise until it perfectly matched the victim's memorized voice features. The result from this (x*) is the **reconstructed feature vector** that the model was highly confident in (>90%), we can interpret this to mean that we successfully stole the unique voice signature of the target. In a real world scenario this blueprint could be fed into a voice synthesizer (vocoder) to create a synthetic playable voice clone, which would allow the attacker to impersonate a victim and bypass voice authenticated security systems (commonly found in IVR trees).
 
 
 
