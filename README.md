@@ -1,2 +1,2 @@
-# model-inversion-attack-simulation
+# Moel Inversion Attack Simulation
 model-inversion-attack
