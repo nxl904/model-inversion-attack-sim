@@ -65,14 +65,21 @@ Since this is a simulation for academic purposes, we will create random data to 
 being used in this context to be the numerical representation of a voice. Once we have the MFCC dataset parameters we will train a Deep Neural Network (DNN - a type of broader AI ) that can identify the voices (MFCC values) that we generated in step 1. 
 
 Technologies used: 
+
 **TensorFlow/Keras:** trains and builds the neural network
+
 **NumPy:** creates fake MFCC data
 
 Methods used (what's being done): 
+
 **MFCC simulation:** pretends to have human voice features
+
 **Label encoding:** turns the users IDs into 0/1 vectors
+
 **Neuarl network creation:** building a simple DNN that can tell users aparat
+
 **Model training:** teaching the victim model which MFCCs belong to which user 
+
 **Selection of target user:** picks user 5 (random) as a the person that we will "attack"
 
 
