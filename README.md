@@ -155,6 +155,55 @@ print("Phase I: DNN Model Training Complete.")
 #Phase I: DNN Model Training Complete.
 ```
 
+#Phase 2: Building the Attack Tool
+
+The goal of phase 2 is to establish the exact targete (victim model) and begin optimization process. Optimization initialization we're looking at how we're going to setup the "problem" for the computer to solve. Think of phase 2 as
+setting the coordinates on a GPS and then checking that you have fuel and a starting position for your car before the trip. The difference is that we're driving to a specfic destination that we don't know yet. The "where" this destination is 
+will be part of phase 3 (running the attack). 
+
+# Technologies used in Phase 2: 
+
+*TensorFlow: creates a variable for the random starting vector
+*Adam Optimizer: corrects the fake MFCC during the simulated attack 
+*NumPy: reshapes data and prepares the inputs
+
+# Methods used in Phase 2
+
+*Create the target label: We want the model to output **User 5**
+*Random initialization: starts with noise, not real audio
+*Define the hyperparameters: the number of interations, learning rate, etc...
+*Set up optimization: preparing to tweak the vector to look like the output (MFCC syntentic voice) of User 5
+
+```python
+#phase 2: start simulated attack (optimization initialization) 
+
+# --- Step 3: Define Target Output ---
+# Target vector for User ID 5
+y_target = tf.keras.utils.to_categorical(target_class_id, num_classes=NUM_CLASSES)
+y_target = np.expand_dims(y_target, axis=0) 
+
+# --- Step 4: Initialize Random Input (Corrected) ---
+input_shape = (1, VECTOR_LENGTH) 
+# Create a random noise vector for the MFCC features (Standard Normal Distribution)
+x_rand = tf.Variable(
+    initial_value=tf.random.normal(shape=input_shape, mean=0.0, stddev=1.0, dtype=tf.float32), 
+    dtype=tf.float32
+)
+
+# --- Step 5: Define Hyperparameters ---
+LEARNING_RATE = 0.1       # Higher LR might be needed for vector optimization
+REGULARIZATION_WEIGHT = 0.005 # Lambda (λ) for the prior loss
+MAX_ITERATIONS = 5000     
+
+optimizer = tf.keras.optimizers.Adam(learning_rate=LEARNING_RATE)
+
+print("Phase II: Optimization Setup Complete. Ready to execute MFCC inversion attack.")
+```
+
+***Output of Phase 2***
+```python
+#Phase II: Optimization Setup Complete. Ready to execute MFCC inversion attack.
+```
 
 
 
