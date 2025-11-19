@@ -28,6 +28,7 @@ This simulation consists of 4 distinct phases and associated code buckets for re
 
 For the first phase we will prepare the victim system for the attack. Our objective in this phase is to create a confident AI model that has memorized sensitive data. 
 
+''''
 '''
 
 # phase 1: setup up target voice model 
@@ -90,6 +91,7 @@ model.fit(
 print("Phase I: DNN Model Training Complete.")
 
 '''
+''''
 
 
 
