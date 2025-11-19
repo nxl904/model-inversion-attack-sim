@@ -14,6 +14,15 @@ The attack works by showing the AI random noise and telling it, "Make this noise
 
 The result is a cloned voice feature vector that can be turned into a playable audio file to impersonate the victim and bypass security. 
 
-# Implementation
+# Approach
+
+This simulation consists of 4 distinct phases and associated code buckets for reference. The phases are as follows: 
+
+1. Building a vulnerable AI
+2. Preparing the attack tool
+3. Running the attack
+4. Evaluation and analysis
+
+
 
 
