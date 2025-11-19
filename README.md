@@ -64,23 +64,23 @@ to build the vulnerable (target) AI model.
 Since this is a simulation for academic purposes, we will create random data to mimic Mel-Frequency Cepstral Coefficient (MFCC) features. MFCC is a feature extraction process that turns complex sound waves into numeric values. Essentially, MFCC is 
 being used in this context to be the numerical representation of a voice. Once we have the MFCC dataset parameters we will train a Deep Neural Network (DNN - a type of broader AI ) that can identify the voices (MFCC values) that we generated in step 1. 
 
-***Technologies used in Phase 1***: 
+**Technologies used in Phase 1**: 
 
-**TensorFlow/Keras:** trains and builds the neural network
+*TensorFlow/Keras:* trains and builds the neural network
 
-**NumPy:** creates fake MFCC data
+*NumPy:* creates fake MFCC data
 
-# **Methods used (what's being done) in Phase 1** : 
+**Methods used (what's being done) in Phase 1** : 
 
-**MFCC simulation:** pretends to have human voice features
+*MFCC simulation:* pretends to have human voice features
 
-**Label encoding:** turns the users IDs into 0/1 vectors
+*Label encoding:* turns the users IDs into 0/1 vectors
 
-**Neuarl network creation:** building a simple DNN that can tell users aparat
+*Neuarl network creation:*building a simple DNN that can tell users aparat
 
-**Model training:** teaching the victim model which MFCCs belong to which user 
+*Model training:*teaching the victim model which MFCCs belong to which user 
 
-**Selection of target user:** picks user 5 (random) as a the person that we will "attack"
+*Selection of target user:* picks user 5 (random) as a the person that we will "attack"
 
 
 ```python
@@ -161,7 +161,7 @@ The goal of phase 2 is to establish the exact targete (victim model) and begin o
 setting the coordinates on a GPS and then checking that you have fuel and a starting position for your car before the trip. The difference is that we're driving to a specfic destination that we don't know yet. The "where" this destination is 
 will be part of phase 3 (running the attack). 
 
-***Technologies used in Phase 2:***
+**Technologies used in Phase 2:**
 
 *TensorFlow: creates a variable for the random starting vector
 
@@ -169,7 +169,7 @@ will be part of phase 3 (running the attack).
 
 *NumPy: reshapes data and prepares the inputs
 
-***Methods used in Phase 2***
+**Methods used in Phase 2**
 
 *Create the target label: We want the model to output **User 5**
 
