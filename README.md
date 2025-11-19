@@ -23,10 +23,31 @@ This simulation consists of 4 distinct phases and associated code buckets for re
 3. Running the attack
 4. Evaluation and analysis
 
+# Technologies used
+
+We will be using the following python libraries and associated technologies to accomplish this: 
+
+tensorflow: deep-learning framework used to compile and build the DNN. tensorflow is essentially a machine-learning engine 
+keras: tensforflows high-level API 
+numpy: python's numerical computing library, used to create synthetic MFCC feature vectors. It's being used in this context to generate and manipulate the simulated dataset
+scikit-learn: python's machine-learning utility toolkit
+matplotlib: python's plotting library. It will 
+
+
 # Phase 1: Building a vulnerable AI 
 
 
-For the first phase we will prepare the victim system for the attack. Our objective in this phase is to create a confident AI model that has memorized sensitive data. 
+For the first phase we will prepare the victim system for the attack. Our objective in this phase is to create a confident AI model that has memorized sensitive data. The code snippet below breaks down Phase 1 into 2 distinct steps needed
+to build the vulnerable (target) AI model. 
+
+1. Select simulated MFCC Dataset
+2. Train the target AI model
+
+Since this is a simulation for academic purposes, we will create random data to mimic Mel-Frequency Cepstral Coefficient (MFCC) features. MFCC is a feature extraction process that turns complex sound waves into numeric values. Essentially, MFCC is 
+being used in this context to be the numerical representation of a voice. Once we have the MFCC dataset parameters we will train a Deep Neural Network (DNN - a type of broader AI ) that can identify the voices (MFCC values) that we generated in step 1. 
+
+
+
 
 ```python
 
