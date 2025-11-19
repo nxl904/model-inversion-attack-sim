@@ -76,9 +76,9 @@ being used in this context to be the numerical representation of a voice. Once w
 
 *Label encoding:* turns the users IDs into 0/1 vectors
 
-*Neuarl network creation:*building a simple DNN that can tell users aparat
+*Neuarl network creation:* building a simple DNN that can tell users aparat
 
-*Model training:*teaching the victim model which MFCCs belong to which user 
+*Model training:* teaching the victim model which MFCCs belong to which user 
 
 *Selection of target user:* picks user 5 (random) as a the person that we will "attack"
 
@@ -163,21 +163,21 @@ will be part of phase 3 (running the attack).
 
 **Technologies used in Phase 2:**
 
-*TensorFlow: creates a variable for the random starting vector
+*TensorFlow:* creates a variable for the random starting vector
 
-*Adam Optimizer: corrects the fake MFCC during the simulated attack 
+*Adam Optimizer:* corrects the fake MFCC during the simulated attack 
 
-*NumPy: reshapes data and prepares the inputs
+*NumPy:* reshapes data and prepares the inputs
 
 **Methods used in Phase 2**
 
-*Create the target label: We want the model to output **User 5**
+*Create the target label:* We want the model to output **User 5**
 
-*Random initialization: starts with noise, not real audio
+*Random initialization:* starts with noise, not real audio
 
-*Define the hyperparameters: the number of interations, learning rate, etc...
+*Define the hyperparameters:* the number of interations, learning rate, etc...
 
-*Set up optimization: preparing to tweak the vector to look like the output (MFCC syntentic voice) of User 5
+*Set up optimization:* preparing to tweak the vector to look like the output (MFCC syntentic voice) of User 5
 
 ```python
 #phase 2: start simulated attack (optimization initialization) 
@@ -205,7 +205,7 @@ optimizer = tf.keras.optimizers.Adam(learning_rate=LEARNING_RATE)
 print("Phase II: Optimization Setup Complete. Ready to execute MFCC inversion attack.")
 ```
 
-***Output of Phase 2***
+#Output of Phase 2
 ```python
 #Phase II: Optimization Setup Complete. Ready to execute MFCC inversion attack.
 ```
