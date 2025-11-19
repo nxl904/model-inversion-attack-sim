@@ -23,7 +23,7 @@ This simulation consists of 4 distinct phases and associated code buckets for re
 3. Running the attack
 4. Evaluation and analysis
 
-# Technologies used
+# Technologies used in Phase 1 
 
 We will be using the following python libraries and associated technologies to accomplish this: 
 
@@ -35,7 +35,7 @@ We will be using the following python libraries and associated technologies to a
 
 **matplotlib:** python's plotting library. It will be used to split data into training/testing sets
 
-# Methods used
+# Methods used in Phase 1
 
 **MFCC (Mel-Frequency Cepstral Coefficients):** audio feature used in speech/speaker recognition
 
