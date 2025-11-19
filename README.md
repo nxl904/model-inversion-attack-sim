@@ -146,6 +146,14 @@ print("Phase I: DNN Model Training Complete.")
 
 ```
 
+# Output of Phase 1:
+
+```python
+Phase I: System Setup - Simulating MFCC Data...
+Data Simulated. Target (User ID 5) Feature Vector shape: (390,)
+Phase I: Starting Target DNN Model Training...
+Phase I: DNN Model Training Complete.
+```
 
 
 
